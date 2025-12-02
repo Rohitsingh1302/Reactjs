@@ -23,3 +23,4 @@ function reduce(state, action){
 // useReducer is a React hook that manages complex state logic in functional components.
 // It takes a reducer function and an initial state, returning the current state and a dispatch function.
 // The reducer function defines how state updates based on dispatched actions.
+// This is particularly useful for managing state with multiple sub-values or complex transitions.

@@ -1,3 +1,4 @@
+//CODE FOR COUNTER USING CUSTOM HOOK
 import React from "react";
 import {useState} from "react";
 export default function useCustomHook(){
@@ -13,11 +14,19 @@ export default function useCustomHook(){
 // In this example, the custom hook useCustomHook manages a counter state with increment and decrement functions.
 // This hook can be imported and used in any component to provide counter functionality, promoting code reuse and cleaner component code.
 
-
-
-
-
-
+// this code is for app.jsx file
+//import useCustomHook from "./classcodes/useCustomHook.jsx";
+//function App() {
+ //const { count, increment, decrement } = useCustomHook();
+ //return (
+//    <div>
+//      <button onClick={increment}> + </button>
+//      <h3>{count}</h3>
+//      <button onClick={decrement}> - </button>
+//    </div>
+//  );
+// }
+// export default App;
 
 
 

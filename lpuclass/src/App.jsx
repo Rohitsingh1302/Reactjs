@@ -1,12 +1,10 @@
-import useCustomHook from "./classcodes/useCustomHook.jsx";
-function App() {
- const { count, increment, decrement } = useCustomHook();
- return (
-   <div>
-     <button onClick={increment}> + </button>
-     <h3>{count}</h3>
-     <button onClick={decrement}> - </button>
-   </div>
- );
+import UseCallback from "./classcodes/usecallback";
+function App(){
+  return (
+      <>
+      < UseCallback/>
+      </>  
+  )
 }
-export default App;
+export default App; 
+// The App component uses the useCustomHook to get the count state and the increment and decrement functions.

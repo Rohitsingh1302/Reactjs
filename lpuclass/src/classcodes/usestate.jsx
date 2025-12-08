@@ -18,4 +18,5 @@ export default function App(){
 //rfuc
 //tell me about this code
 //This code defines a React functional component named App that uses the useState hook to manage a count state variable. It also defines a Child component that receives an onClick prop and renders a button. When the button in the Child component is clicked, it triggers the onClick function passed from the App component, logging "CHILD BUTTON CLICKED" to the console. The App component displays the current count and includes a button to increase the count by 1 when clicked. Each time the count is updated, the App component re-renders, but the Child component does not re-render unnecessarily because the handlechildclick function is not recreated on each render.
-//rfuc
+//how to optimize this code
+//To optimize this code and prevent unnecessary re-renders of the Child component, you can use the useCallback hook to memoize the handlechildclick function. This way, the function reference remains the same across renders unless its dependencies change. Here's the optimized code:

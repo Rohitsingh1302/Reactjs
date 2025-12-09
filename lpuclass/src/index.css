@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-violet-50: #f5f3ff;
+  --color-blue-50: #eff6ff;
+  --color-cyan-50: #ecfeff;
+}

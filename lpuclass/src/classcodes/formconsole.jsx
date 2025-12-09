@@ -49,7 +49,7 @@ export default function MyForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-blue-50 to-cyan-50 flex items-center justify-center p-4 animate-[gradient_8s_ease_infinite] bg-[length:200%_200%]">
+    <div className="min-h-screen bg-blue-50 flex items-center justify-center p-4">
       <style>{`
         @keyframes gradient {
           0%, 100% { background-position: 0% 50%; }
@@ -79,12 +79,12 @@ export default function MyForm() {
       <div className="w-full max-w-lg animate-scaleIn">
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-10 border border-white/20 hover:shadow-3xl transition-shadow duration-300">
           <div className="text-center mb-10 animate-fadeInUp">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full mb-4 animate-[spin_3s_ease-in-out_infinite]">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-4 animate-[spin_3s_ease-in-out_infinite]">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2 animate-fadeInUp delay-100">Create Account</h2>
+            <h2 className="text-4xl font-bold text-blue-600 mb-2 animate-fadeInUp delay-100">Create Account</h2>
             <p className="text-gray-600 animate-fadeInUp delay-200">Join us today and get started</p>
           </div>
 
@@ -162,14 +162,14 @@ export default function MyForm() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white font-bold py-4 rounded-xl hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 mt-6 animate-fadeInUp delay-500 hover:animate-pulse"
+              className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 mt-6 animate-fadeInUp delay-500 hover:bg-blue-700"
             >
               Create Account
             </button>
           </form>
 
           {submitted && (
-            <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-xl animate-[bounce_1s_ease-in-out]">
+            <div className="mt-6 p-4 bg-green-50 border-2 border-green-300 rounded-xl animate-[bounce_1s_ease-in-out]">
               <p className="text-green-700 font-semibold text-center flex items-center justify-center gap-2">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

@@ -1,8 +1,9 @@
-import UseCallback from "./classcodes/usecallback";
+import MyForm from "./classcodes/formconsole";
+import "./App.css";
 function App(){
   return (
       <>
-      < UseCallback/>
+      < MyForm/>
       </>  
   )
 }

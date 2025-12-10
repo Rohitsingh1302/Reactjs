@@ -7,6 +7,8 @@ export const getPosts = () => {
 };
 
 //app.jsx ka code:- 
+
+
 // import React, { useEffect } from "react";
 // import { getPosts } from "./services/postapi.jsx";
 // export default function App() {

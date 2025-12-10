@@ -3,5 +3,5 @@ const api = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com",
 });
 export const getPosts = () => {
-  return api.get("/posts"); // return promise
+  return api.get("/posts"); // return promise from axios
 };

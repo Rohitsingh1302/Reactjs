@@ -7,4 +7,4 @@ function Card() {
     </div>
   );
 }   
-//
+//export the card function

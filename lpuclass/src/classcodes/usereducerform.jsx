@@ -26,3 +26,4 @@ export default function Register() {
 }
 //rfuc
 //This code defines a React functional component named Register that uses the useReducer hook to manage the state of a user registration form. The form includes fields for username, password, and email. The initial state is an object with empty strings for each field. The reduce function handles state updates based on dispatched actions. When the user types in any of the input fields, an action is dispatched to update the corresponding field in the state. There is also a reset button that, when clicked, dispatches a 'reset' action to revert the state back to its initial values. The current values of the username, email, and password are displayed below the form.
+//how to optimize this code

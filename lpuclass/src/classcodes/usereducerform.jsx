@@ -29,3 +29,4 @@ export default function Register() {
 //how to optimize this code
 //To optimize this code, you can consider the following improvements:
 //1. Use useCallback for dispatching functions to prevent unnecessary re-renders of child components if any are added in the future.
+//2. Validate input fields to ensure data integrity before updating the state.

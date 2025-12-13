@@ -31,3 +31,4 @@ export default function Register() {
 //1. Use useCallback for dispatching functions to prevent unnecessary re-renders of child components if any are added in the future.
 //2. Validate input fields to ensure data integrity before updating the state.
 //3. Implement form submission handling to process the collected data.
+//4. Use a library like Formik or React Hook Form for more complex forms to simplify state management and validation.

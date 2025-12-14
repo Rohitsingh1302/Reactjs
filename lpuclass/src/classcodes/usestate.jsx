@@ -23,3 +23,4 @@ export default function App(){
 //1. Import useCallback from React.
 //2. Wrap the handlechildclick function with useCallback, providing an empty dependency array since it does not depend on any external variables.
 //Here’s the optimized code:
+//  import React, { useState, useCallback } from "react";

@@ -27,3 +27,4 @@ export default function App(){
 //  const Child = React.memo(({ onClick }) => {
     // console.log("CHILD RENDERED");
     // return <button onClick={onClick}>click Child</button>;
+    //  });

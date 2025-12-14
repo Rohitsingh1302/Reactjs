@@ -24,3 +24,4 @@ export default function App(){
 //2. Wrap the handlechildclick function with useCallback, providing an empty dependency array since it does not depend on any external variables.
 //Here’s the optimized code:
 //  import React, { useState, useCallback } from "react";
+//  const Child = React.memo(({ onClick }) => {

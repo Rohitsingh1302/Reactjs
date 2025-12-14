@@ -26,3 +26,4 @@ export default function App(){
 //  import React, { useState, useCallback } from "react";
 //  const Child = React.memo(({ onClick }) => {
     // console.log("CHILD RENDERED");
+    // return <button onClick={onClick}>click Child</button>;

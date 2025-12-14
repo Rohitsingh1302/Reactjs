@@ -22,3 +22,4 @@ export default function App(){
 //To optimize this code and prevent unnecessary re-renders of the Child component, you can use the useCallback hook to memoize the handlechildclick function. This way, the function reference remains the same across renders unless its dependencies  change. Here’s how you can do it:
 //1. Import useCallback from React.
 //2. Wrap the handlechildclick function with useCallback, providing an empty dependency array since it does not depend on any external variables.
+//Here’s the optimized code:

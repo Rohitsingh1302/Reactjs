@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from 'react'
-import { createUser, getAllUsers } from './services/postapi'
-import "./app.css";
+import { createUser, editUser, getAllUsers } from  './services/postapi'
+import "./App.css"
 
-export default function App() {
+export default function Data() {
   const [users,setUsers]=useState([])
   const [isEdit,setIsEdit]=useState(false);
+  const [editId, setEditId] = useState([])
   const [user,setUser]=useState({name:"",email:"",phone:""})
 const handleEdit=(value)=>{
   setIsEdit(true)
   setUser({name:value.name,email:value.email,phone:value.phone})
+  setEditId(value.id)
+}
+
+const handleUpdate = async() =>{
+  const res = await editUser(editId, user)
+  setUsers(users.map((value) => {
+    return value.id === res.data.id?{...value, ...res.data} : value
+  }))
 }
   
 const fetchUsers=async()=>{
@@ -44,11 +53,10 @@ useEffect(()=>{
   <label>Email</label>
   <input type='email' value={user.email}   onChange={(e)=>setUser({...user,email:e.target.value})}/>
 
-{isEdit ? <button>Edit</button>:<button onClick={addUser}>Add</button>}
+{/* {isEdit ? <button>Edit</button>:<button onClick={addUser}>Add</button>} */}
+{isEdit ? <button onClick={handleUpdate}>Update</button> : <button onClick={addUser}>Add</button>}
 </div>
 
-
-{/* CARD CONTAINER ROW WISE */}
 <div style={{
   display: "flex",
   flexWrap: "wrap",
@@ -61,7 +69,7 @@ useEffect(()=>{
       padding: "15px",
       border: "1px solid #ddd",
       borderRadius: "12px",
-      background: "#f9f9f9",
+      background: "#db6363ff",
       display: "flex",
       flexDirection: "column",
       gap: "8px",

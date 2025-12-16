@@ -1,181 +1,168 @@
-* {
-  margin: 0;
-  padding: 0;
+/* * {
   box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  background: #f3f4f6;
+}
+
+.page {
   min-height: 100vh;
-  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Form Styling */
-div[style*="maxWidth: \"400px\""] {
-  background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(10px) !important;
-  border: none !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
-  border-radius: 20px !important;
+.card {
+  width: 360px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px 26px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-label {
+.card h2 {
+  text-align: center;
+  color: #1f7a3e;
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.req {
+  color: #e11d48;
+  margin-left: 3px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.3);
+}
+
+.inline-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.inline-label {
+  font-size: 0.9rem;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 0.85rem;
+  margin: 8px 0 14px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
   font-weight: 600;
-  color: #4a5568;
-  font-size: 14px;
-  margin-bottom: 5px;
 }
 
-input {
-  padding: 14px 16px !important;
-  border: 2px solid #e2e8f0 !important;
-  border-radius: 12px !important;
-  font-size: 15px !important;
-  transition: all 0.3s ease !important;
-  background: #fff !important;
+.btn-reset {
+  background: #22c55e;
+  color: white;
 }
 
-input:focus {
-  outline: none !important;
-  border-color: #667eea !important;
-  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
-  transform: translateY(-1px) !important;
+.btn-submit {
+  background: #15803d;
+  color: white;
 }
 
-button {
-  padding: 14px 28px !important;
-  border: none !important;
-  border-radius: 12px !important;
-  font-weight: 600 !important;
-  font-size: 15px !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
+.btn:hover {
+  filter: brightness(0.95);
+} */
+/* Global Styles */
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-button:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+/* Card Base */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-button:active {
-  transform: translateY(0) !important;
+/* Add Post Card */
+.add-card {
+  margin-bottom: 40px;
 }
 
-/* Add Button */
-button[onclick*="addUser"] {
-  background: linear-gradient(135deg, #48bb78, #38a169) !important;
-  color: white !important;
+.add-card form {
+  display: flex;
+  gap: 10px;
 }
 
-button[onclick*="addUser"]:hover {
-  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4) !important;
+.add-card input {
+  padding: 8px;
+  flex: 1;
 }
 
-/* Edit Button in Form */
-button:not([onclick]):not([style]) {
-  background: linear-gradient(135deg, #4299e1, #3182ce) !important;
-  color: white !important;
+.add-card button {
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
-/* Card Container */
-div[style*="flexWrap: \"wrap\""] {
-  justify-content: center !important;
-  max-width: 1200px !important;
-  margin: 40px auto 0 !important;
-  padding: 0 20px !important;
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
 }
 
-/* Individual Cards */
-div[style*="width: \"260px\""] {
-  background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(10px) !important;
-  border: none !important;
-  border-radius: 16px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
-  transition: all 0.3s ease !important;
-  width: 280px !important;
-  padding: 20px !important;
-}
-
-div[style*="width: \"260px\""]:hover {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Card Content */
-h4 {
-  color: #667eea !important;
-  font-size: 18px !important;
-  margin-bottom: 12px !important;
-  font-weight: 700 !important;
-}
-
-p {
-  color: #4a5568 !important;
-  font-size: 14px !important;
-  line-height: 1.6 !important;
-  margin-bottom: 8px !important;
-}
-
-strong {
-  color: #2d3748 !important;
-  font-weight: 600 !important;
-}
-
-/* Button Container in Cards */
-div[style*="display: \"flex\""][style*="gap: \"10px\""] {
-  margin-top: 16px !important;
-  gap: 12px !important;
-}
-
-/* Edit Button in Cards */
-div[style*="display: \"flex\""][style*="gap: \"10px\""] button:first-child {
-  background: linear-gradient(135deg, #4299e1, #3182ce) !important;
-  color: white !important;
-  flex: 1 !important;
-  padding: 10px 16px !important;
-  font-size: 13px !important;
-}
-
-div[style*="display: \"flex\""][style*="gap: \"10px\""] button:first-child:hover {
-  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4) !important;
-}
-
-/* Delete Button in Cards */
-div[style*="display: \"flex\""][style*="gap: \"10px\""] button:last-child {
-  background: linear-gradient(135deg, #f56565, #e53e3e) !important;
-  color: white !important;
-  flex: 1 !important;
-  padding: 10px 16px !important;
-  font-size: 13px !important;
-}
-
-div[style*="display: \"flex\""][style*="gap: \"10px\""] button:last-child:hover {
-  box-shadow: 0 6px 20px rgba(245, 101, 101, 0.4) !important;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  div[style*="flexWrap: \"wrap\""] {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  
-  div[style*="width: \"260px\""] {
-    width: 100% !important;
-    max-width: 350px !important;
-  }
-}
-
-/* Loading Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-div[style*="width: \"260px\""] {
-  animation: fadeIn 0.5s ease-out !important;
+/* Post Card */
+.post-id {
+  font-size: 12px;
+  color: gray;
 }

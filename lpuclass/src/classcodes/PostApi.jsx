@@ -18,3 +18,10 @@ export const deleteUser=(id)=>{
 export const editUser=(id,data)=>{
     return api.put(`/users/${id}`,data);
 }
+
+// app.jsx code:-
+
+import React,{useEffect, useState} from 'react';
+import {createUser, getAllUsers, deleteUser, editUser} from './services/PostApi';
+export default function App(){
+    const [users,setUsers]=useState([]);

@@ -7,27 +7,27 @@ export default function Data() {
   const [isEdit,setIsEdit]=useState(false);
   const [editId, setEditId] = useState([])
   const [user,setUser]=useState({name:"",email:"",phone:""})
-const handleEdit=(value)=>{
+  const handleEdit=(value)=>{
   setIsEdit(true)
   setUser({name:value.name,email:value.email,phone:value.phone})
   setEditId(value.id)
 }
 
-const handleUpdate = async() =>{
+  const handleUpdate = async() =>{
   const res = await editUser(editId, user)
   setUsers(users.map((value) => {
     return value.id === res.data.id?{...value, ...res.data} : value
   }))
 }
 
-const fetchUsers=async()=>{
+  const fetchUsers=async()=>{
   const res=await getAllUsers();
   console.log(res.data)
   setUsers(res.data)
   setUser({name:"",email:"",phone:""})
 }
 
-const addUser=async()=>{
+  const addUser=async()=>{
   const res=await createUser(user);
   setUsers([...users,res.data])
 }
@@ -77,12 +77,10 @@ useEffect(()=>{
       gap: "8px",
       boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
     }}>
-
       <h4>UserId: {value.id}</h4>
       <p><strong>Name:</strong> {value.name}</p>
       <p><strong>Email:</strong> {value.email}</p>
       <p><strong>Phone No.:</strong> {value.phone}</p>
-
       <div style={{ display: "flex", gap: "10px" }}>
         <button onClick={()=>handleEdit(value)}>Edit</button>
         <button>Delete</button>

@@ -26,10 +26,12 @@ const fetchUsers=async()=>{
   setUsers(res.data)
   setUser({name:"",email:"",phone:""})
 }
+
 const addUser=async()=>{
   const res=await createUser(user);
   setUsers([...users,res.data])
 }
+
 useEffect(()=>{
    fetchUsers()
 },[])

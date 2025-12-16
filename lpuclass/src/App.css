@@ -1,37 +1,181 @@
-
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Form Styling */
+div[style*="maxWidth: \"400px\""] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: none !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 20px !important;
+}
+
+label {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 14px 16px !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease !important;
+  background: #fff !important;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+  transform: translateY(-1px) !important;
+}
+
+button {
+  padding: 14px 28px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+button:active {
+  transform: translateY(0) !important;
+}
+
+/* Add Button */
+button[onclick*="addUser"] {
+  background: linear-gradient(135deg, #48bb78, #38a169) !important;
+  color: white !important;
+}
+
+button[onclick*="addUser"]:hover {
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4) !important;
+}
+
+/* Edit Button in Form */
+button:not([onclick]):not([style]) {
+  background: linear-gradient(135deg, #4299e1, #3182ce) !important;
+  color: white !important;
+}
+
+/* Card Container */
+div[style*="flexWrap: \"wrap\""] {
+  justify-content: center !important;
+  max-width: 1200px !important;
+  margin: 40px auto 0 !important;
+  padding: 0 20px !important;
+}
+
+/* Individual Cards */
+div[style*="width: \"260px\""] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  width: 280px !important;
+  padding: 20px !important;
+}
+
+div[style*="width: \"260px\""]:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Card Content */
+h4 {
+  color: #667eea !important;
+  font-size: 18px !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+}
+
+p {
+  color: #4a5568 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 8px !important;
+}
+
+strong {
+  color: #2d3748 !important;
+  font-weight: 600 !important;
+}
+
+/* Button Container in Cards */
+div[style*="display: \"flex\""][style*="gap: \"10px\""] {
+  margin-top: 16px !important;
+  gap: 12px !important;
+}
+
+/* Edit Button in Cards */
+div[style*="display: \"flex\""][style*="gap: \"10px\""] button:first-child {
+  background: linear-gradient(135deg, #4299e1, #3182ce) !important;
+  color: white !important;
+  flex: 1 !important;
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+}
+
+div[style*="display: \"flex\""][style*="gap: \"10px\""] button:first-child:hover {
+  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.4) !important;
+}
+
+/* Delete Button in Cards */
+div[style*="display: \"flex\""][style*="gap: \"10px\""] button:last-child {
+  background: linear-gradient(135deg, #f56565, #e53e3e) !important;
+  color: white !important;
+  flex: 1 !important;
+  padding: 10px 16px !important;
+  font-size: 13px !important;
+}
+
+div[style*="display: \"flex\""][style*="gap: \"10px\""] button:last-child:hover {
+  box-shadow: 0 6px 20px rgba(245, 101, 101, 0.4) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  div[style*="flexWrap: \"wrap\""] {
+    flex-direction: column !important;
+    align-items: center !important;
   }
-  to {
-    transform: rotate(360deg);
+  
+  div[style*="width: \"260px\""] {
+    width: 100% !important;
+    max-width: 350px !important;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Loading Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+div[style*="width: \"260px\""] {
+  animation: fadeIn 0.5s ease-out !important;
 }

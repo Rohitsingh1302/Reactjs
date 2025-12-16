@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createUser, getAllUsers } from './services/postapi'
+import "./app.css";
 
 export default function App() {
   const [users,setUsers]=useState([])

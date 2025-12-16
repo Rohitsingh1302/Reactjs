@@ -19,7 +19,7 @@ const handleUpdate = async() =>{
     return value.id === res.data.id?{...value, ...res.data} : value
   }))
 }
-  
+
 const fetchUsers=async()=>{
   const res=await getAllUsers();
   console.log(res.data)

@@ -17,3 +17,10 @@ export default Greet;
 // import Greet from "./path/to/Greet";
 
 // function App() {
+//     return (
+//         <div>
+//             <Greet />
+//         </div>
+//     );
+// }    
+//export default App;

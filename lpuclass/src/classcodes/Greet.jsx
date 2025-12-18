@@ -10,3 +10,4 @@ class Greet extends Component{
 }
 export default Greet;
 //what this code is doing
+//This code defines a React class component named "Greet" that extends the base Component class from the React library. The component's render method returns a JSX fragment containing an <h1> element with the text "GOOD MORNING". When this component is rendered in a React application, it will display the greeting message on the screen. Finally, the component is exported as the default export of the module, allowing it to be imported and used in other parts of the application.

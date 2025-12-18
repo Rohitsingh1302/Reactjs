@@ -9,3 +9,4 @@ class Greet extends Component{
     }
 }
 export default Greet;
+//what this code is doing

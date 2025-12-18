@@ -14,3 +14,6 @@ export default Greet;
 ///how to use this code
 //To use this Greet component in a React application, you would typically import it into another component or your main application file and include it in the JSX. For example:
 // import React from "react";
+// import Greet from "./path/to/Greet";
+
+// function App() {

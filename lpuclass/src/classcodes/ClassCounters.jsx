@@ -33,10 +33,4 @@ class ClassCounters extends Component {
 }
 
 export default ClassCounters;
-//concept: class component with state in react js
-//description: build a class component with two separate counters and increment functionality using this.state and this.setState.
-//output way:-
-// import ClassCounters from "./ClassCodes/Counters.jsx";
-//   <>
-//   <ClassCounters />
-//   </>
+

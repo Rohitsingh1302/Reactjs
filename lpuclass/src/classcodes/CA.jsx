@@ -36,5 +36,3 @@ function FormValidation() {
     </form>
   );
 }
-
-export default FormValidation;

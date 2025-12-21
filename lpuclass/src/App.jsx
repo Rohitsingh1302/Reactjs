@@ -1,5 +1,5 @@
 import React from "react";
-import Greet from "./path/to/Greet";
+import Greet from "./classcodes/Greet";
 function App() {
     return (
         <div>

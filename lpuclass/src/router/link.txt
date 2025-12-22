@@ -1,0 +1,15 @@
+import {Link} from 'react-router'
+export default function Home(){
+    return(
+        <div>
+            <h1>hello from home page</h1>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+        </div>
+    )
+}
+
+
+
+
+//home page pr edit krna hai bss

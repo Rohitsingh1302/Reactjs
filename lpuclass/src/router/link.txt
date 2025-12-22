@@ -9,7 +9,4 @@ export default function Home(){
     )
 }
 
-
-
-
 //home page pr edit krna hai bss

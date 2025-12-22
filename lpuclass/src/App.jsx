@@ -4,6 +4,7 @@ import Home from "./router/home.jsx";
 import About from "./router/about.jsx";
 import Contact from "./router/contact.jsx"
 import Profile from "./router/profile.jsx";
+import User from "./router/user.jsx";
 
 export default function App() {
     return (

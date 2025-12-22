@@ -1,12 +1,11 @@
-import {Link} from 'react-router'
+import {Link, useNavigate} from 'react-router';
 export default function Home(){
+    const navigate = useNavigate();
     return(
         <div>
             <h1>hello from home page</h1>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <button onClick={ () => navigate('/about') }>About</button>
+            <button onClick={ () => navigate('/contact') }>Contact</button>
         </div>
     )
 }
-
-//home page pr edit krna hai bss

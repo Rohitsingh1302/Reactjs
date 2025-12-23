@@ -9,3 +9,12 @@ export function todoReducer(state = initialState, action){ //action will pass th
                 ...state,
                 todos:[...state.todos, action.payload]
             }
+             case 'DELETE_TASK':
+            return{
+                ...state,
+                todos:state.todos.filter((item, index) => index !== action.payload)
+            }
+        default:
+            return state
+    }
+}

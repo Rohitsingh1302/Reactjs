@@ -1,23 +1,36 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
-import Home from "./router/home.jsx";
-import About from "./router/about.jsx";
-import Contact from "./router/contact.jsx"
-import Profile from "./router/profile.jsx";
-import User from "./router/user.jsx";
+import {useDispatch, useSelector} from "react-redux"
+import { useEffect, useState } from 'react'
+function App() {
+const dispatch = useDispatch()
+  const [task, setTask] = useState("")
+  const todos = useSelector((state) => state.todos)
+  const addTask = () => {
+    dispatch({
+      type : 'ADD_TASK',
+      payload : task
+    })
+    setTask("")
+  }
 
-export default function App() {
-    return (
-        <div>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/user/:id" element={<User/>} />   //dynamic routing"
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
-} //making the routes 
+  const deleteTask = (id) => {
+    dispatch({
+      type : 'DELETE_TASK',
+      payload : id
+    })
+  }
+  return(
+    <div>
+      <h2>Task Manager</h2>
+      <input type="text" onChange={(e) =>setTask(e.target.value)} />
+      <button onClick={addTask}>Add Task</button>
+      <h3>All Tasks: </h3>
+      <ul>{todos.map((item, idx) => 
+        <li key={idx}> 
+        {idx}{item} <button onClick={() => deleteTask(idx)}>Delete Task</button>
+        </li>)}
+      </ul>
+    </div>
+  )
+}
+
+export default App
